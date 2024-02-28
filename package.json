@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "mobile-menu-odin-project",
   "version": "1.0.0",
-  "description": "My app description",
+  "description": "A simple animated mobile menu",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://myrepo..."
+    "url": "https://github.com/carlosfrontend/mobile-menu-odin-project.git"
   },
   "author": "carlosfrontend",
   "license": "ISC",
   "bugs": {
-    "url": "https://myrepo..."
+    "url": "https://github.com/carlosfrontend/mobile-menu-odin-project/issues"
   },
-  "homepage": "https://myrepo...",
+  "homepage": "https://github.com/carlosfrontend/mobile-menu-odin-project/#readme",
   "devDependencies": {
     "css-loader": "^6.9.0",
     "css-minimizer-webpack-plugin": "^6.0.0",

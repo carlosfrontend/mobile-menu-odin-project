@@ -1,7 +1,113 @@
-.starter-title{
-    font-family: sans-serif;
-    font-weight: bold;
-    color:dodgerblue;
-    text-align: center;
-    font-size: 4rem;
+:root {
+  --navbar-bg-color: rgba(36, 47, 18, 0.089);
+  --icons-color: rgba(0, 0, 0, 0.613);
+  --button-shadow-color: #2f592329;
+  --buttons-bg-color: #00000000;
+  --reset-tap-color: rgba(0, 0, 0, 0);
+  --button-focus-bg-color: rgba(0, 0, 0, 0.594);
+  --icon-focus-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2em;
+}
+
+#navbar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--navbar-bg-color);
+  transition: all 100ms ease-in-out 200ms;
+  padding: 0 0;
+}
+
+:is(#home-button, #profile-button, #send-button, #settings-button) {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: var(--buttons-bg-color);
+  -webkit-tap-highlight-color: var(--reset-tap-color);
+  box-shadow: 1px 1px 1px 3px var(--button-shadow-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out 200ms;
+  transition: transform 200ms ease-in-out 300ms;
+}
+
+#menu-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: var(--menu-color);
+  background-color: transparent;
+  border: none;
+  -webkit-tap-highlight-color: var(--reset-tap-color);
+  cursor: pointer;
+}
+
+.fa-circle-dot {
+  font-size: 3rem;
+  color: var(--icons-color);
+}
+
+.fa-solid:not(.fa-circle-dot) {
+  font-size: 1.8rem;
+  color: var(--icons-color);
+  transition: all 180ms ease-in 100ms;
+}
+
+:is(#home-button, #profile-button, #send-button, #settings-button).showButtons {
+  opacity: 1;
+  visibility: visible;
+  transition: all 400ms ease-in-out 200ms;
+}
+
+#navbar.showNavbar {
+  width: 95%;
+  height: 5em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--navbar-bg-color);
+  padding: 1em 1em;
+}
+
+#home-button.rotateLeft,
+#profile-button.rotateLeft {
+  transform: rotate(-360deg);
+}
+
+#send-button.rotateRight,
+#settings-button.rotateRight {
+  transform: rotate(360deg);
+}
+
+:is(#home-button, #profile-button, #send-button, #settings-button):focus {
+  box-shadow: none;
+  background-color: var(--button-focus-bg-color);
+}
+
+.fa-solid:not(.fa-circle-dot).changeIconsStyles {
+  color: var(--icon-focus-color);
+  transform: scale(0.9);
 }

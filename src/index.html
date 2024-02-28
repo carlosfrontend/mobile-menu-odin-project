@@ -3,9 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <h1 class="starter-title">Starter Template</h1>
+   <div id="navbar-container">
+    <nav id="navbar">
+      <button type="button" id="home-button"><i class="fa-solid fa-house"></i></button>
+      <button type="button" id="profile-button"><i class="fa-solid fa-user"></i></button>
+      <button type="button" id="menu-button"><i class="fa-solid fa-circle-dot"></i></button>
+      <button type="button" id="send-button"><i class="fa-solid fa-paper-plane"></i></button>
+      <button type="button" id="settings-button"><i class="fa-solid fa-gear"></i></button>
+    </nav>
+   </div>
   </body>
 </html>
